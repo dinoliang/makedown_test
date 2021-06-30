@@ -90,5 +90,40 @@ __強調__
 
 [markdown-doc]:https://github.com/othree/markdown-syntax-zhtw/blob/master/syntax.md
 
+## 這是特殊字元自動轉換測試
+在 HTML 文件中，有兩個字元需要特殊處理： `<` 和 `&` 。 `<` 符號用於起始標籤，`&` 符號則用於標記 HTML 實體，如果你只是想要使用這些符號，你必須要使用實體的形式，像是 `&lt;` 和 `&amp;`。
+
+`&` 符號其實很容易讓寫作網路文件的人感到困擾，如果你要打「AT&T」 ，你必須要寫成「`AT&amp;T`」 ，還得轉換網址內的 `&` 符號，如果你要連結到：
+
+    http://images.google.com/images?num=30&q=larry+bird
+
+你必須要把網址轉成：
+
+    http://images.google.com/images?num=30&amp;q=larry+bird
+
+才能放到連結標籤的 `href` 屬性裡。不用說也知道這很容易忘記，這也可能是 HTML 標準檢查所檢查到的錯誤中，數量最多的。
+
+Markdown 允許你直接使用這些符號，但是你要小心跳脫字元的使用，如果你是在HTML 實體中使用 `&` 符號的話，它不會被轉換，而在其它情形下，它則會被轉換成 `&amp;`。所以你如果要在文件中插入一個著作權的符號，你可以這樣寫：
+
+    &copy;
+
+Markdown 將不會對這段文字做修改，但是如果你這樣寫：
+
+    AT&T
+
+Markdown 就會將它轉為：
+
+    AT&amp;T
+
+類似的狀況也會發生在 `<` 符號上，因為 Markdown 支援 [行內 HTML](#html) ，如果你是使用 `<` 符號作為 HTML 標籤使用，那 Markdown 也不會對它做任何轉換，但是如果你是寫：
+
+    4 < 5
+
+Markdown 將會把它轉換為：
+
+    4 &lt; 5
+
+不過需要注意的是，code 範圍內，不論是行內還是區塊， `<` 和 `&` 兩個符號都*一定*會被轉換成 HTML 實體，這項特性讓你可以很容易地用 Markdown 寫 HTML code （和 HTML 相對而言， HTML 語法中，你要把所有的 `<` 和 `&` 都轉換為 HTML 實體，才能在 HTML 文件裡面寫出 HTML code。）
+
 ## 這是圖片測試
 ![unsplash 圖片](https://images.unsplash.com/photo-1573900941478-7cc800f708f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80)
