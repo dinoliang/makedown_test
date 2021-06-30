@@ -127,3 +127,8 @@ Markdown 將會把它轉換為：
 
 ## 這是圖片測試
 ![unsplash 圖片](https://images.unsplash.com/photo-1573900941478-7cc800f708f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80)
+
+
+## reference
+https://github.com/othree/markdown-syntax-zhtw/blob/master/syntax.md
+https://wcc723.github.io/development/2019/11/23/ten-mins-learn-markdown/
