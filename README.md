@@ -88,7 +88,7 @@ __強調__
 
 [Markdown: Syntax][markdown-doc].
 
-[markdown-doc]:https://github.com/othree/markdown-syntax-zhtw/blob/master/syntax.md#%E8%A1%8C%E5%85%A7-html
+[markdown-doc]:https://github.com/othree/markdown-syntax-zhtw/blob/master/syntax.md
 
 ## 這是圖片測試
 ![unsplash 圖片](https://images.unsplash.com/photo-1573900941478-7cc800f708f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80)
